@@ -1,0 +1,132 @@
+{
+    "epf_balance": {
+        "contributions_last_year": 4800,
+        "current_balance": 55000
+    },
+    "credit_score": {
+        "score": 780,
+        "rating": "Excellent"
+    },
+    "assets": [
+        {
+            "amount": 2500,
+            "name": "Checking Account",
+            "type": "cash"
+        },
+        {
+            "amount": 12000,
+            "name": "Savings Account",
+            "type": "cash"
+        },
+        {
+            "amount": 350000,
+            "name": "Property 1",
+            "type": "property"
+        }
+    ],
+    "liabilities": [
+        {
+            "name": "Student Loan",
+            "outstanding_balance": 15000,
+            "interest_rate": 0.05,
+            "type": "loan"
+        },
+        {
+            "name": "Credit Card A",
+            "outstanding_balance": 500,
+            "interest_rate": 0.18,
+            "type": "credit_card"
+        }
+    ],
+    "transactions": [
+        {
+            "date": "2024-06-15",
+            "amount": 4000,
+            "description": "Salary",
+            "id": "t1",
+            "type": "income"
+        },
+        {
+            "date": "2024-06-20",
+            "amount": 75.5,
+            "description": "Groceries",
+            "id": "t2",
+            "type": "expense",
+            "category": "Food"
+        },
+        {
+            "date": "2024-07-05",
+            "amount": 1200,
+            "description": "Rent",
+            "id": "t3",
+            "type": "expense",
+            "category": "Housing"
+        },
+        {
+            "date": "2024-07-10",
+            "amount": 250,
+            "description": "Dining out",
+            "id": "t4",
+            "type": "expense",
+            "category": "Food"
+        },
+        {
+            "date": "2024-07-25",
+            "amount": 50,
+            "description": "Coffee",
+            "id": "t5",
+            "type": "expense",
+            "category": "Food"
+        },
+        {
+            "date": "2024-08-01",
+            "amount": 4000,
+            "description": "Salary",
+            "id": "t6",
+            "type": "income"
+        },
+        {
+            "date": "2024-08-15",
+            "amount": 300,
+            "description": "Utilities",
+            "id": "t7",
+            "type": "expense",
+            "category": "Utilities"
+        },
+        {
+            "date": "2024-08-20",
+            "amount": 150,
+            "description": "Shopping",
+            "id": "t8",
+            "type": "expense",
+            "category": "Shopping"
+        },
+        {
+            "date": "2024-09-01",
+            "amount": 4000,
+            "description": "Salary",
+            "id": "t9",
+            "type": "income"
+        },
+        {
+            "date": "2024-09-05",
+            "amount": 120,
+            "description": "Gas",
+            "id": "t10",
+            "type": "expense",
+            "category": "Transportation"
+        }
+    ],
+    "investments": [
+        {
+            "name": "Tech Stock Fund",
+            "type": "mutual_fund",
+            "value": 7500
+        },
+        {
+            "name": "Bond Portfolio",
+            "type": "bond",
+            "value": 3000
+        }
+    ]
+}
