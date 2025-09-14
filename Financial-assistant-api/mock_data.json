@@ -1,0 +1,206 @@
+{
+    "epf_balance": {
+        "contributions_last_year": 4800,
+        "current_balance": 55000
+    },
+    "credit_score": {
+        "score": 780,
+        "rating": "Excellent"
+    },
+    "assets": [
+        {
+            "amount": 2500,
+            "name": "Checking Account",
+            "type": "cash"
+        },
+        {
+            "amount": 12000,
+            "name": "Savings Account",
+            "type": "cash"
+        },
+        {
+            "amount": 350000,
+            "name": "Property 1",
+            "type": "property"
+        }
+    ],
+    "liabilities": [
+        {
+            "name": "Student Loan",
+            "outstanding_balance": 15000,
+            "interest_rate": 0.05,
+            "type": "loan"
+        },
+        {
+            "name": "Credit Card A",
+            "outstanding_balance": 500,
+            "interest_rate": 0.18,
+            "type": "credit_card"
+        }
+    ],
+    "transactions": [
+        {
+            "date": "2024-09-10",
+            "amount": 50.5,
+            "description": "Coffee Shop",
+            "id": "t1",
+            "type": "expense",
+            "category": "Food"
+        },
+        {
+            "date": "2024-09-09",
+            "amount": 120,
+            "description": "Groceries",
+            "id": "t2",
+            "type": "expense",
+            "category": "Groceries"
+        },
+        {
+            "date": "2024-09-08",
+            "amount": 150,
+            "description": "Freelance Work",
+            "id": "t3",
+            "type": "income"
+        },
+        {
+            "date": "2024-09-07",
+            "amount": 35.75,
+            "description": "Gas Station",
+            "id": "t4",
+            "type": "expense",
+            "category": "Transportation"
+        },
+        {
+            "date": "2024-09-06",
+            "amount": 85,
+            "description": "Dinner with friends",
+            "id": "t5",
+            "type": "expense",
+            "category": "Food"
+        },
+        {
+            "date": "2024-08-25",
+            "amount": 750,
+            "description": "Rent",
+            "id": "t6",
+            "type": "expense",
+            "category": "Housing"
+        },
+        {
+            "date": "2024-08-22",
+            "amount": 80,
+            "description": "Electricity Bill",
+            "id": "t7",
+            "type": "expense",
+            "category": "Utilities"
+        },
+        {
+            "date": "2024-08-20",
+            "amount": 150,
+            "description": "Shopping",
+            "id": "t8",
+            "type": "expense",
+            "category": "Shopping"
+        },
+        {
+            "date": "2024-09-01",
+            "amount": 4000,
+            "description": "Salary",
+            "id": "t9",
+            "type": "income"
+        },
+        {
+            "date": "2024-09-05",
+            "amount": 120,
+            "description": "Gas",
+            "id": "t10",
+            "type": "expense",
+            "category": "Transportation"
+        }
+    ],
+    "investments": [
+        {
+            "name": "Tech Stock Fund",
+            "type": "mutual_fund",
+            "value": 7500
+        },
+        {
+            "name": "Bond Portfolio",
+            "type": "bond",
+            "value": 3000
+        },
+        {
+            "name": "Crypto Portfolio",
+            "type": "crypto",
+            "value": 1200
+        }
+    ],
+    "stocks": [
+        {
+            "ticker": "AAPL",
+            "company_name": "Apple Inc.",
+            "shares": 30,
+            "purchase_price": 150.00,
+            "current_price": 175.20,
+            "total_value": 5256.00
+        },
+        {
+            "ticker": "MSFT",
+            "company_name": "Microsoft Corp.",
+            "shares": 50,
+            "purchase_price": 300.50,
+            "current_price": 340.80,
+            "total_value": 17040.00
+        }
+    ],
+    "insurance_policies": [
+        {
+            "type": "Health Insurance",
+            "provider": "MediSecure",
+            "policy_number": "MS987654",
+            "monthly_premium": 250.00,
+            "coverage_amount": 500000.00
+        },
+        {
+            "type": "Auto Insurance",
+            "provider": "AutoSafe Insurers",
+            "policy_number": "AS-XYZ-12345",
+            "monthly_premium": 80.00,
+            "coverage_amount": 100000.00
+        }
+    ],
+    "recurring_bills": [
+        {
+            "service": "Streaming Service",
+            "provider": "NetStream",
+            "amount": 15.99,
+            "due_day": 5
+        },
+        {
+            "service": "Gym Membership",
+            "provider": "FitLife Gym",
+            "amount": 40.00,
+            "due_day": 15
+        },
+        {
+            "service": "Internet",
+            "provider": "ConnectFast ISP",
+            "amount": 60.00,
+            "due_day": 20
+        }
+    ],
+    "financial_goals": [
+        {
+            "name": "European Vacation Fund",
+            "target_amount": 50000.00,
+            "current_amount_saved": 15000.00,
+            "target_date": "2026-06-01"
+        },
+        {
+            "name": "New Car Down Payment",
+            "target_amount": 1000000.00,
+            "current_amount_saved": 450000.00,
+            "target_date": "2027-01-15"
+        }
+    ]
+}

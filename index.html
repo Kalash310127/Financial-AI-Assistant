@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Assistant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .container {
+            max-width: 800px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+
+    <div class="container bg-white rounded-xl shadow-lg p-6 md:p-10 border border-gray-200">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">Financial Assistant</h1>
+            <p class="text-sm md:text-base text-gray-600">Interact with your Spring Boot backend.</p>
+        </div>
+
+        <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 mb-6">
+            <input type="text" id="queryInput" class="flex-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200" placeholder="e.g., how much did I spend last month?">
+            <button onclick="sendQuery()" class="bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-blue-700 transition duration-200">Send</button>
+        </div>
+
+        <div id="output" class="bg-gray-50 rounded-lg p-4 md:p-6 border border-gray-200 min-h-[200px] overflow-auto whitespace-pre-wrap">
+            <p class="text-gray-500 italic">Results will appear here...</p>
+        </div>
+
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+            <button onclick="getSpendingSummary('last_month')" class="bg-indigo-500 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-indigo-600 transition duration-200">Get Last Month's Spending</button>
+            <button onclick="getComprehensiveSummary()" class="bg-green-500 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-green-600 transition duration-200">Get Comprehensive Summary</button>
+        </div>
+    </div>
+
+    <script>
+        const queryInput = document.getElementById('queryInput');
+        const outputDiv = document.getElementById('output');
+
+        function showLoading() {
+            outputDiv.innerHTML = '<p class="text-gray-500 italic">Loading...</p>';
+        }
+
+        function displayResult(text) {
+            outputDiv.textContent = text;
+        }
+
+        async function fetchAPI(endpoint) {
+            showLoading();
+            const baseUrl = 'http://localhost:8080/api/financial-assistant'; // Match your Spring Boot port
+            try {
+                const response = await fetch(`${baseUrl}/${endpoint}`);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const text = await response.text();
+                displayResult(text);
+            } catch (error) {
+                displayResult(`Error: ${error.message}. Make sure your Spring Boot server is running on port 8080.`);
+                console.error('Fetch error:', error);
+            }
+        }
+
+        async function sendQuery() {
+            const query = queryInput.value.trim();
+            if (query === '') {
+                displayResult('Please enter a query.');
+                return;
+            }
+            await fetchAPI(`handle-query?query=${encodeURIComponent(query)}`);
+        }
+
+        async function getSpendingSummary(timeframe) {
+            await fetchAPI(`spending-summary?timeframe=${encodeURIComponent(timeframe)}`);
+        }
+
+        async function getComprehensiveSummary() {
+            await fetchAPI('comprehensive-summary');
+        }
+
+    </script>
+
+</body>
+</html>
