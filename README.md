@@ -13,23 +13,15 @@ AI-Powered Insights: For more complex or open-ended queries, the application int
 
 How to Use
 Once the application is running, you can interact with it through the command line.
-
 Grant/Revoke Access:
-
 grant access to transactions
-
 revoke access to assets
 
 Financial Queries:
-
 What is my net worth?
-
 Show me my recent transactions
-
 What is my spending summary for the last month?
-
 Provide a comprehensive summary of my finances.
 
 Exit:
-
 exit
