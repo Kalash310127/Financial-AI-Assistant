@@ -1,4 +1,5 @@
 Financial Assistant Application
+
 This project is a Java-based command-line financial assistant designed to help users manage their personal finances. It uses a local mock data file to simulate a user's financial profile, a permission system for data privacy, and integrates with a large language model (LLM) to provide intelligent insights and summaries.
 
 Features
